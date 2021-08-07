@@ -44,25 +44,15 @@ echo "input natural number" > ${ans}
 ./report5.sh 1.5 2.5 > ${result}
 diff ${ans} ${result} || echo "error in 2-4" >> ${err}
 
-##5 空白0
-echo "input natural number" > ${ans}
-./report5.sh "" 100 > ${result}
-diff ${ans} ${result} || echo "error in 2-5" >> ${err}
-
-##6 空白1
-echo "input natural number" > ${ans}
-./report5.sh " " 100 > ${result}
-diff ${ans} ${result} || echo "error in 2-6" >> ${err}
-
-##7 負1
+##5 負1
 echo "input positive number" > ${ans}
 ./report5.sh 100 -200 > ${result}
-diff ${ans} ${result} || echo "error in 2-7" >> ${err}
+diff ${ans} ${result} || echo "error in 2-5" >> ${err}
 
-##8 負2
+##6 負2
 echo "input positive number" > ${ans}
 ./report5.sh -100 -200 > ${result}
-diff ${ans} ${result} || echo "error in 2-8" >> ${err}
+diff ${ans} ${result} || echo "error in 2-6" >> ${err}
 
 #3 出力
 ##1 630 300
